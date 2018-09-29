@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ethereum:
+    container_name: ethereum
+    image: ethereum/client-go
+    command: --rpc --rpcaddr 0.0.0.0 --metrics --fast --ws --nousb --gcmode archive
+
+  kafka:
+    container_name: kafka
+    hostname: kafka
+    image: spotify/kafka
+    environment:
+      ADVERTISED_HOST: localhost
+      ADVERTISED_PORT: 9092
+    ports:
+      - 9092:9092
