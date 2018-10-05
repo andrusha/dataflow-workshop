@@ -1,6 +1,8 @@
 # Docker
 
-Declarative infrastructure
+## Prerequisites
+
+- [Docker](https://www.docker.com/products/docker-desktop)
 
 ## [Architecture](https://docs.docker.com/engine/docker-overview/#docker-architecture)
 
@@ -20,5 +22,5 @@ Declarative infrastructure
   - `docker run --rm -ti supertest2014/nyan`
 - Build container and run it
   - `docker build -t intro-docker .`
-  - `docker run --rm -p 8080:8080 intro-docker`
+  - `docker run --rm -ri -p 8080:8080 intro-docker`
   - `open http://localhost:8080`

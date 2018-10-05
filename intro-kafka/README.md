@@ -1,5 +1,10 @@
 # Kafka
 
+## Prerequisites
+
+- [Docker](https://www.docker.com/products/docker-desktop)
+- kafkacat `brew install kafkacat`
+
 ## [Architecture](https://kafka.apache.org/documentation/#design)
 
 - Cluster 1-\* Topic 1-\* Partition
@@ -14,7 +19,7 @@
 ## Kafka hands-on
 
 - Run containerized Kafka locally
-  - `docker run -e ADVERTISED_HOST=localhost -e ADVERTISED_PORT=9092 -p 9092:9092 spotify/kafka`
+  - `docker run --rm -e ADVERTISED_HOST=localhost -e ADVERTISED_PORT=9092 -p 9092:9092 spotify/kafka`
 - Connect producer
   - `kafkacat -P -b localhost:9092 -t testtopic -p 0`
 - Connect a few consumer
