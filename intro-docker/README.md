@@ -11,7 +11,7 @@
 
 ## Benefits
 
-- Reproducable environment (shared for production, development, etc)
+- Reproducible environment (shared for production, development, etc)
 - Isolation (containers don't pollute host system)
 - Simpler deploys, rollbacks, scaling
 - Efficient resource sharing (container \*-1 node)
@@ -19,8 +19,8 @@
 ## Tasks
 
 - Run docker container
-  - `docker run --rm -ti supertest2014/nyan`
+  - `docker run --rm -it supertest2014/nyan`
 - Build container and run it
   - `docker build -t intro-docker .`
-  - `docker run --rm -ri -p 8080:8080 intro-docker`
+  - `docker run --rm --init -it -p 8080:8080 intro-docker`
   - `open http://localhost:8080`

@@ -6,4 +6,4 @@ ADD . /app
 WORKDIR /app
 RUN npm install
 
-CMD tini npm start
+CMD npm start
